@@ -2,7 +2,7 @@
 
 ---
 
-# Menu Animation Library Test
+# Menu Animation Library 
 
 This repository demonstrates various types of animated menus created using an external JavaScript library. The purpose of this project is to showcase multiple menu styles and transitions that can be easily implemented on any website. The menus in this project include slide, fade, pop, overlay, dropdown, modal, push, rotational, and morph animations.
 
