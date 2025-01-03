@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Animation Library Test</title>
+    <link rel="stylesheet" href="menu-styles.css">
+    <style>
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: aquamarine;
+        }
+        .test-section {
+            margin: 20px 0;
+            padding: 20px;
+            border: 1px solid #ddd;
+        }
+        .menu-list {
+            list-style: none;
+            padding: 0;
+        }
+        .menu-list li a {
+            display: block;
+            padding: 10px;
+            color: #333;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Menu Animation Tests</h1>
+
+        <!-- Slide Menu -->
+        <div class="test-section">
+            <button data-menu="slide" data-target="#slideMenu" data-direction="left" data-duration="300">
+                Open Slide Menu
+            </button>
+            <div id="slideMenu" class="menu-slide">
+                <div class="menu-content">
+                    <ul class="menu-list">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Fade Menu -->
+        <div class="test-section">
+            <button data-menu="fade" data-target="#fadeMenu" data-duration="300">
+                Open Fade Menu
+            </button>
+            <div id="fadeMenu" class="menu-fade">
+                <div class="menu-content">
+                    <ul class="menu-list">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pop Menu -->
+        <div class="test-section">
+            <button data-menu="pop" data-target="#popMenu" data-duration="300">
+                Open Pop Menu
+            </button>
+            <div id="popMenu" class="menu-pop">
+                <div class="menu-content">
+                    <ul class="menu-list">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Overlay Menu -->
+        <div class="test-section">
+            <button data-menu="overlay" data-target="#overlayMenu" data-duration="300">
+                Open Overlay Menu
+            </button>
+            <div id="overlayMenu" class="menu-overlay">
+                <div class="menu-content">
+                    <ul class="menu-list">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dropdown Menu -->
+        <div class="test-section">
+            <button data-menu="dropdown" data-target="#dropdownMenu" data-duration="300">
+                Open Dropdown Menu
+            </button>
+            <div id="dropdownMenu" class="menu-dropdown">
+                <div class="menu-content">
+                    <ul class="menu-list">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Menu -->
+        <div class="test-section">
+            <button data-menu="modal" data-target="#modalMenu" data-duration="300">
+                Open Modal Menu
+            </button>
+            <div id="modalMenu" class="menu-modal">
+                <div class="menu-content">
+                    <ul class="menu-list">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Push Menu -->
+        <div class="test-section">
+            <button data-menu="push" data-target="#pushMenu" data-direction="left" data-duration="300">
+                Open Push Menu
+            </button>
+            <div id="pushMenu" class="menu-push">
+                <div class="menu-content">
+                    <ul class="menu-list">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Rotational Menu -->
+        <div class="test-section">
+            <button data-menu="rotational" data-target="#rotationalMenu" data-duration="300">
+                Open Rotational Menu
+            </button>
+            <div id="rotationalMenu" class="menu-rotational">
+                <div class="menu-content">
+                    <ul class="menu-list">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Morph Menu -->
+        <div class="test-section">
+            <button data-menu="morph" data-target="#morphMenu" data-duration="300">
+                Open Morph Menu
+            </button>
+            <div id="morphMenu" class="menu-morph">
+                <div class="menu-content">
+                    <ul class="menu-list">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="./js/menu-library.js"></script>
+</body>
+</html>

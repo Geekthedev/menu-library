@@ -1,0 +1,208 @@
+body {
+  background-color: #726b6b;
+}
+
+/* Base styles */
+[data-menu-container] {
+  position: fixed;
+  z-index: 1000;
+  background-color: #444444; /* Unified background color */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Menu Trigger Button */
+[data-menu] {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.75rem 1.25rem;
+  background-color: #444444; /* Unified background color */
+  color: rgb(211, 211, 211);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  width: 200px;
+}
+
+[data-menu]:hover {
+  background-color: #333333; /* Unified hover color */
+}
+
+/* Common content styles */
+.menu-content {
+  padding: 1.25rem;
+  height: 100%;
+  overflow-y: auto;
+  color: #fff; /* White text for contrast */
+}
+
+.menu-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: #444444; /* Unified background color */
+}
+
+.menu-content ul li {
+  margin: 0.5rem 0;
+}
+
+.menu-content ul li a {
+  color: #fff; /* White text for readability */
+  text-decoration: none;
+  display: block;
+  padding: 0.75rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.menu-content ul li a:hover {
+  background-color: #333333; /* Unified hover color */
+}
+
+/* Menu Types */
+
+/* Slide Menu */
+.menu-slide,
+.menu-push {
+  width: 300px;
+  height: 50vh;
+  top: 0;
+  transition: transform 0.3s ease-in-out;
+  will-change: transform;
+  background-color: #444444; /* Unified background color */
+}
+
+.menu-slide {
+  position: fixed;
+}
+
+.menu-push {
+  position: fixed;
+  left: 0;
+}
+
+/* Fade Menu */
+.menu-fade {
+  width: 300px;
+  height: 100vh;
+  top: 0;
+  right: 0;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  will-change: opacity, visibility;
+  background-color: #444444; /* Unified background color */
+}
+
+/* Expand Menu */
+.menu-expand {
+  width: 100%;
+  overflow: hidden;
+  transition: height 0.3s ease-in-out, opacity 0.3s ease;
+  will-change: height, opacity;
+  background-color: #444444; /* Unified background color */
+}
+
+/* Pop Menu */
+.menu-pop {
+  width: 300px;
+  max-height: 90vh;
+  border-radius: 8px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.95);
+  transition: transform 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
+  will-change: transform, opacity, visibility;
+  background-color: #444444; /* Unified background color */
+}
+
+/* Overlay Menu */
+.menu-overlay {
+  width: 10%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: #444444; /* Unified background color */
+  transform: translateY(-100%);
+  transition: transform 0.4s ease, opacity 0.4s ease, visibility 0.4s ease;
+  will-change: transform, opacity, visibility;
+}
+
+/* Dropdown Menu */
+.menu-dropdown {
+  min-width: 200px;
+  background: #444444; /* Unified background color */
+  border-radius: 4px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  transform-origin: top center;
+  transition: transform 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
+  will-change: transform, opacity, visibility;
+}
+
+/* Modal Menu */
+.menu-modal {
+  width: 90%;
+  max-width: 500px;
+  background: #444444; /* Unified background color */
+  border-radius: 12px;
+  padding: 1.5rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  will-change: opacity, visibility;
+}
+
+/* Rotational Menu */
+.menu-rotational {
+  width: 300px;
+  height: 300px;
+  background: #444444; /* Unified background color */
+  border-radius: 8px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(90deg);
+  transition: transform 0.4s ease, opacity 0.4s ease, visibility 0.4s ease;
+  will-change: transform, opacity, visibility;
+}
+
+/* Morph Menu */
+.menu-morph {
+  background: #444444; /* Unified background color */
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform, width, height, border-radius;
+}
+
+/* Overlay Backdrop */
+.menu-overlay-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Responsive Styles */
+@media (min-width: 768px) {
+  .menu-modal {
+    max-width: 600px;
+  }
+
+  .menu-slide,
+  .menu-push {
+    width: 350px;
+  }
+}
+
+/* Performance Optimizations */
+* {
+  backface-visibility: hidden;
+  -webkit-font-smoothing: antialiased;
+}
